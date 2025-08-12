@@ -7,13 +7,13 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: 04-Aug
 
 steps:
 - task: NodeTool@0
+  displayName: 'Install Node.js'
   inputs:
     versionSpec: '20.x'
-  displayName: 'Install Node.js'
 
 - script: |
     npm install
