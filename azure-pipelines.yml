@@ -4,10 +4,14 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+  branches:
+    include:
+      - main
 
 pool:
   name: 04-Aug
+
+
 
 steps:
 - task: NodeTool@0
@@ -19,3 +23,4 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
